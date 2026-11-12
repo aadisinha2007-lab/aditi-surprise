@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aditi's Universe ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff7eb3,#ff758c);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+.page{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+}
+.active{display:flex;}
+.card{
+background:rgba(255,255,255,.15);
+padding:25px;
+border-radius:20px;
+max-width:800px;
+backdrop-filter:blur(10px);
+}
+img{
+width:260px;
+height:340px;
+object-fit:cover;
+border-radius:20px;
+display:none;
+}
+img.active{display:block;}
+.count{
+font-size:80px;
+font-weight:bold;
+}
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<div class="page active" id="p1">
+<div class="card">
+<h1>✨ Loading Aditi's Universe ✨</h1>
+<p>Preparing something special...</p>
+</div>
+</div>
+
+<div class="page" id="p2">
+<div class="card">
+<h1>❤️ Aditi Singh Chauhan ❤️</h1>
+
+<img src="photo1.png" class="slide active">
+<img src="photo2.png" class="slide">
+<img src="photo3.png" class="slide">
+<img src="photo4.png" class="slide">
+
+<p>
+Some people become important without even trying... ✨
+</p>
+</div>
+</div>
+
+<div class="page" id="p3">
+<div class="card">
+<h1>💌 Dear Aditi</h1>
+
+<p>
+Thank you for making boring days better ❤️<br><br>
+
+Thank you for every smile 😊<br><br>
+
+And thank you for being one of my favourite people ✨
+</p>
+</div>
+</div>
+
+<div class="page" id="p4">
+<div class="card">
+<h1>😂 Aditi Facts</h1>
+
+<p>
+✅ Cute<br>
+✅ Funny<br>
+✅ Amazing Friend<br>
+✅ Official Pookie<br>
+✅ Bestie Material ❤️
+</p>
+</div>
+</div>
+
+<div class="page" id="p5">
+<h1>🏆 Bestie Award</h1>
+<div class="count">❤️</div>
+<p>
+Winner:<br>
+Aditi Singh Chauhan
+</p>
+</div>
+
+<div class="page" id="p6">
+<div class="card">
+<h1>🌸 Final Message 🌸</h1>
+
+<p>
+This is not a proposal website ❤️<br><br>
+
+This is just a reminder that
+you are one of my favourite humans ✨<br><br>
+
+Never change 🌸
+</p>
+
+<button onclick="finish()">
+💖 Bestie Forever
+</button>
+
+</div>
+</div>
+
+<script>
+
+function show(id){
+document.querySelectorAll('.page')
+.forEach(x=>x.classList.remove('active'));
+
+document.getElementById(id)
+.classList.add('active');
+}
+
+setTimeout(()=>show("p2"),3000);
+setTimeout(()=>show("p3"),12000);
+setTimeout(()=>show("p4"),22000);
+setTimeout(()=>show("p5"),32000);
+setTimeout(()=>show("p6"),40000);
+
+let slides=document.querySelectorAll(".slide");
+let c=0;
+
+setInterval(()=>{
+slides[c].classList.remove("active");
+c=(c+1)%slides.length;
+slides[c].classList.add("active");
+},2500);
+
+function finish(){
+document.body.innerHTML=
+"<div style='height:100vh;display:flex;justify-content:center;align-items:center;font-size:40px;'>❤️ Best Friends Forever ❤️</div>";
+}
+</script>
+
+</body>
+</html>
